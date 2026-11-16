@@ -1,0 +1,4 @@
+build/app/outputs/flutter-apk/app-debug.apk: 1 file pushed, 0 skipped. 389.4 MB/s (149693537 bytes in 0.367s)
+Performing Push Install
+Success
+Starting: Intent { cmp=com.example.firebase_cloud_quest_cw3/.MainActivity }

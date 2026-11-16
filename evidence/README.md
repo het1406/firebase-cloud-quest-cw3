@@ -30,4 +30,4 @@ These artifacts were produced by actual automated commands and Android emulator 
 
 Read test results to distinguish implementation from verified behavior. All seven current numbered journey stages are present and the Android integration test passes. The additional historical unavailable screenshot predates the fallback requirement. A successful live-model AI hint and the full live-cloud journey remain missing. Backend safety checks do not prove live model quality or general prompt-injection resistance.
 
-CLI environment-dump lines and ANSI control sequences are removed from captured text for privacy/readability. Remaining messages and results are genuine. `signal-check.json` excludes session tokens and passwords.
+CLI environment-dump lines and ANSI control sequences are removed from captured text for privacy/readability; trailing whitespace is normalized. Remaining messages and results are genuine. `signal-check.json` excludes session tokens and passwords.

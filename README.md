@@ -1,15 +1,25 @@
 # CW3 — Firebase Cloud Quest: Signal Check
 
-**Student:** Het Jani  
-**Submitted By:** Het Jani  
-**Project Owner:** Het Jani  
-**Submission By:** Het Jani  
-**Course:** CSC 4360 — Mobile App Development  
-**Assignment:** CW3 — Firebase Cloud Quest — Version 2: Signal Check  
-**Deadline:** November 15, 2026, 11:59 PM EST  
-**Pathway:** Undergraduate  
-**Submission Type:** Individual Coursework  
-**Project Type:** Individual Coursework  
+**Student:** Het Jani
+
+**Submitted By:** Het Jani
+
+**Project Owner:** Het Jani
+
+**Submission By:** Het Jani
+
+**Course:** CSC 4360 — Mobile App Development
+
+**Assignment:** CW3 — Firebase Cloud Quest — Version 2: Signal Check
+
+**Deadline:** November 15, 2026, 11:59 PM EST
+
+**Pathway:** Undergraduate
+
+**Submission Type:** Individual Coursework
+
+**Project Type:** Individual Coursework
+
 **Repository:** https://github.com/het1406/firebase-cloud-quest-cw3
 
 Cloud Quest is a new Flutter application built from an empty workspace for CW3. Students sign in, read a shared challenge, ask a coach for help, and earn a fixed reward through a trusted server function. No previous coursework source was copied.
@@ -104,6 +114,10 @@ npx firebase emulators:exec --project demo-cloud-quest --only auth,firestore,fun
 - `evidence/cloud-rules-deploy.txt` and `evidence/cloud-challenge-seed.txt` record successful cloud work. `evidence/cloud-functions-deploy.txt` records the billing blocker.
 
 Test execution was automated during implementation. Het Jani must review the results, repeat the personal demonstration, and follow the course's assistance-disclosure requirements. No personal observations or earlier development history are invented.
+
+## Submission package
+
+The source archive is `../CW3_Het_Jani_Submission.zip`. It includes the committed source, tests, documentation, and evidence under `firebase_cloud_quest_cw3/`. Dependencies, private local configuration, and build caches are excluded. The standalone debug APK remains at `build/app/outputs/flutter-apk/app-debug.apk`.
 
 ## Limitations
 

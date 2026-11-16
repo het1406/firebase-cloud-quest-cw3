@@ -7,14 +7,14 @@
 ✔ tool reads only caller state (5.807709ms)
 ✔ question boundaries reject malformed and unauthorized input (0.324875ms)
 ✔ rules allow authenticated challenge and own progress reads (240.999ms)
-[2026-11-16T02:43:39.066Z]  @firebase/firestore: Firestore (13.3.0): GrpcConnection RPC 'Write' stream 0x1c115f18 error. Code: 7 Message: 7 PERMISSION_DENIED: 
+[2026-11-16T02:43:39.066Z]  @firebase/firestore: Firestore (13.3.0): GrpcConnection RPC 'Write' stream 0x1c115f18 error. Code: 7 Message: 7 PERMISSION_DENIED:
 false for 'create' @ L10, false for 'update' @ L10
-[2026-11-16T02:43:39.107Z]  @firebase/firestore: Firestore (13.3.0): GrpcConnection RPC 'Write' stream 0x1c115f19 error. Code: 7 Message: 7 PERMISSION_DENIED: 
+[2026-11-16T02:43:39.107Z]  @firebase/firestore: Firestore (13.3.0): GrpcConnection RPC 'Write' stream 0x1c115f19 error. Code: 7 Message: 7 PERMISSION_DENIED:
 false for 'create' @ L10, false for 'update' @ L10
-[2026-11-16T02:43:39.112Z]  @firebase/firestore: Firestore (13.3.0): GrpcConnection RPC 'Write' stream 0x1c115f1a error. Code: 7 Message: 7 PERMISSION_DENIED: 
+[2026-11-16T02:43:39.112Z]  @firebase/firestore: Firestore (13.3.0): GrpcConnection RPC 'Write' stream 0x1c115f1a error. Code: 7 Message: 7 PERMISSION_DENIED:
 false for 'create' @ L6, false for 'update' @ L6
 ✔ rules deny cross-user reads, all reward writes and challenge writes (81.4195ms)
-[2026-11-16T02:43:39.135Z]  @firebase/firestore: Firestore (13.3.0): GrpcConnection RPC 'Write' stream 0x1c115f1c error. Code: 7 Message: 7 PERMISSION_DENIED: 
+[2026-11-16T02:43:39.135Z]  @firebase/firestore: Firestore (13.3.0): GrpcConnection RPC 'Write' stream 0x1c115f1c error. Code: 7 Message: 7 PERMISSION_DENIED:
 false for 'create' @ L10, false for 'update' @ L10
 ✔ rules deny anonymous reads and writes (23.086833ms)
 i  functions: Trying to access secret GOOGLE_GENAI_API_KEY@latest

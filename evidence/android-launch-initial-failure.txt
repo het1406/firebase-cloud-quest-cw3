@@ -1,0 +1,9 @@
+adb: failed to run abb_exec. Error: protocol fault (couldn't read status): Undefined error: 0
+adb: retrieving the default device installation mode failed: protocol fault (couldn't read status): Undefined error: 0
+* daemon still not running
+adb: failed to run abb_exec. Error: cannot connect to daemon at tcp:5037: Connection refused
+Performing Streamed Install
+adb: connect error for write: cannot connect to daemon at tcp:5037: Connection refused
+* daemon not running; starting now at tcp:5037
+* daemon started successfully
+adb: device offline

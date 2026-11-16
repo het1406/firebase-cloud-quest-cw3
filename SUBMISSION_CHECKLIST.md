@@ -1,12 +1,19 @@
 # CW3 — Firebase Cloud Quest: Signal Check
 
-**Student:** Het Jani  
-**Submitted By:** Het Jani  
-**Project Owner:** Het Jani  
-**Submission By:** Het Jani  
-**Course:** CSC 4360 — Mobile App Development  
-**Submission Type:** Individual Coursework  
-**Pathway:** Undergraduate  
+**Student:** Het Jani
+
+**Submitted By:** Het Jani
+
+**Project Owner:** Het Jani
+
+**Submission By:** Het Jani
+
+**Course:** CSC 4360 — Mobile App Development
+
+**Submission Type:** Individual Coursework
+
+**Pathway:** Undergraduate
+
 **Repository:** https://github.com/het1406/firebase-cloud-quest-cw3
 
 **Deadline:** November 15, 2026, 11:59 PM EST
@@ -29,6 +36,9 @@
 - [x] README, 128-word reflection draft, student reflection guide, and 100-point rubric audit prepared.
 - [x] Student identity confirmed as Het Jani.
 - [x] Dedicated private GitHub repository created under the authenticated student account.
+- [x] Source and documentation pushed; remote commit verified against local main.
+- [x] Standalone debug APK builds successfully.
+- [x] Source submission ZIP prepared at `../CW3_Het_Jani_Submission.zip` (source, tests, documents, and evidence; generated build caches excluded).
 
 ## Final review and remaining requirements
 
