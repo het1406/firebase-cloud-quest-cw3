@@ -1,0 +1,1 @@
+{"name":"quest-functions","private":true,"main":"src/index.js","engines":{"node":"22"},"dependencies":{"firebase-admin":"latest","firebase-functions":"latest","genkit":"latest","@genkit-ai/google-genai":"latest"}}

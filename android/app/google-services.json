@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "455675119155",
+    "project_id": "het-cw3-quest-20261115",
+    "storage_bucket": "het-cw3-quest-20261115.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:455675119155:android:73676337d34a64e20ec546",
+        "android_client_info": {
+          "package_name": "com.example.firebase_cloud_quest_cw3"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCJFDy9tDumFNDX2y0R3XsDckhmhcXU4U8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
