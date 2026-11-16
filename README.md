@@ -121,7 +121,7 @@ The source archive is `../CW3_Het_Jani_Submission.zip`. It includes the committe
 
 ## Limitations
 
-Live AI generation and professor approval of the provisional provider, cloud Authentication, deployed callable functions, and full cloud operation remain unverified. iOS cannot be built with the current incomplete Xcode/CocoaPods environment. The daily document is a fixed coursework challenge, not a date-rotation system. Production hardening could add App Check and server-side quotas. This repository is private; grant the instructor access before submitting its URL.
+Live AI generation and professor approval of the provisional provider, cloud Authentication, deployed callable functions, and full cloud operation remain unverified. iOS cannot be built with the current incomplete Xcode/CocoaPods environment. The daily document is a fixed coursework challenge, not a date-rotation system. Production hardening could add App Check and server-side quotas. This repository is public and can be viewed without an invitation.
 
 See [REFLECTION.md](REFLECTION.md), [STUDENT_REFLECTION_GUIDE.md](STUDENT_REFLECTION_GUIDE.md), [RUBRIC_AUDIT.md](RUBRIC_AUDIT.md), and [SUBMISSION_CHECKLIST.md](SUBMISSION_CHECKLIST.md).
 

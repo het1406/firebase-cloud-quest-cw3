@@ -35,7 +35,7 @@
 - [x] Fresh cloud project, Android/iOS client registrations, Firestore rules deployment, and challenge seed completed.
 - [x] README, 128-word reflection draft, student reflection guide, and 100-point rubric audit prepared.
 - [x] Student identity confirmed as Het Jani.
-- [x] Dedicated private GitHub repository created under the authenticated student account.
+- [x] Dedicated public GitHub repository verified under the authenticated student account.
 - [x] Source and documentation pushed; remote commit verified against local main.
 - [x] Standalone debug APK builds successfully.
 - [x] Source submission ZIP prepared at `../CW3_Het_Jani_Submission.zip` (source, tests, documents, and evidence; generated build caches excluded).
@@ -49,7 +49,7 @@
 - [ ] Personally review the passing Android log/screenshots in `evidence/README.md` and perform your own demonstration.
 - [ ] Build/test iOS if required; current Xcode/CocoaPods setup is incomplete.
 - [ ] Review and personalize reflection using genuine observations; comply with any required assistance disclosure.
-- [ ] Confirm instructor access to the private GitHub repository.
+- [x] Repository visibility is public; instructor access does not require an invitation.
 - [ ] Check the course portal's exact file/link/video requirements; none were provided in the assignment prompt.
 - [ ] Upload required deliverables and repository URL to the course portal, then verify its receipt. **Not submitted.**
 
