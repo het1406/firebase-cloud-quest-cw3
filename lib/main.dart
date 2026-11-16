@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'quest_callable.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:cloud_firestore/cloud_firestore.dart';
@@ -13,7 +14,7 @@ Future<void> main() async {
       options: const FirebaseOptions(
         apiKey: String.fromEnvironment(
           'FIREBASE_API_KEY',
-          defaultValue: 'demo-api-key',
+          defaultValue: 'ADemoProjectApiKey000000000000000000000',
         ),
         appId: String.fromEnvironment(
           'FIREBASE_APP_ID',
@@ -116,6 +117,8 @@ String friendlyError(Object error) {
         'Service unavailable. Check the connection and try again.',
       'too-many-requests' => 'Too many attempts. Please wait and try again.',
       'unauthenticated' => 'Please sign in again.',
+      'internal' =>
+        'The service could not complete your request. Please retry.',
       _ => error.message ?? 'Something went wrong. Please retry.',
     };
   }
@@ -289,12 +292,10 @@ class _QuestScreenState extends State<QuestScreen> {
       rewardMessage = null;
     });
     try {
-      final result = await FirebaseFunctions.instance
-          .httpsCallable('completeToday')
-          .call({'challengeId': 'today'});
+      final result = await callQuest('completeToday', {'challengeId': 'today'});
       if (mounted) {
         setState(
-          () => rewardMessage = result.data['alreadyCompleted'] == true
+          () => rewardMessage = result['alreadyCompleted'] == true
               ? 'Already completed — your reward stays at 10 points.'
               : 'Quest complete! You earned 10 points and First Quest.',
         );
@@ -317,10 +318,10 @@ class _QuestScreenState extends State<QuestScreen> {
       hint = null;
     });
     try {
-      final result = await FirebaseFunctions.instance
-          .httpsCallable('askQuestCoach')
-          .call({'question': question.text.trim()});
-      if (mounted) setState(() => hint = result.data['hint'] as String);
+      final result = await callQuest('askQuestCoach', {
+        'question': question.text.trim(),
+      });
+      if (mounted) setState(() => hint = result['hint'] as String);
     } catch (e) {
       if (mounted) setState(() => coachError = friendlyError(e));
     } finally {

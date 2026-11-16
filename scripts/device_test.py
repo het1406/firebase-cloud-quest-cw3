@@ -5,10 +5,11 @@ import os
 import shutil
 from pathlib import Path
 root = Path(__file__).resolve().parents[1]
-flutter = os.environ.get('FLUTTER_BIN') or shutil.which('flutter') or '/Users/hetjani/develop/flutter/bin/flutter'
+flutter = os.environ.get('FLUTTER_BIN') or shutil.which('flutter') or str(Path.home() / 'develop/flutter/bin/flutter')
 adb = os.environ.get('ADB_BIN') or shutil.which('adb') or str(Path.home() / 'Library/Android/sdk/platform-tools/adb')
+device = os.environ.get('ANDROID_DEVICE', 'emulator-5554')
 with (root / 'evidence/android-journey.txt').open('w') as log:
-    proc = subprocess.Popen([flutter, 'test', 'integration_test/journey_test.dart', '-d', 'emulator-5554', '--reporter', 'expanded'], cwd=root, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
+    proc = subprocess.Popen([flutter, 'test', 'integration_test/journey_test.dart', '-d', device, '--reporter', 'expanded'], cwd=root, stdout=subprocess.PIPE, stderr=subprocess.STDOUT, text=True)
     for line in proc.stdout:
         log.write(line)
         log.flush()
@@ -16,5 +17,5 @@ with (root / 'evidence/android-journey.txt').open('w') as log:
         marker = re.search(r'EVIDENCE: ([a-z0-9-]+)', line)
         if marker:
             with (root / f'evidence/{marker[1]}.png').open('wb') as png:
-                subprocess.run([adb, '-s', 'emulator-5554', 'exec-out', 'screencap', '-p'], stdout=png, check=True)
+                subprocess.run([adb, '-s', device, 'exec-out', 'screencap', '-p'], stdout=png, check=True)
     raise SystemExit(proc.wait())
