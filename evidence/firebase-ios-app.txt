@@ -1,0 +1,59 @@
+[2026-11-16T00:41:53.039Z] ----------------------------------------------------------------------
+[2026-11-16T00:41:53.041Z] Command:       /usr/local/bin/node /Users/hetjani/Desktop/CW02/firebase_cloud_quest_cw3/node_modules/.bin/firebase apps:create IOS Cloud Quest iOS --bundle-id com.example.firebaseCloudQuestCw3 --project het-cw3-quest-20261115
+[2026-11-16T00:41:53.041Z] CLI Version:   15.36.0
+[2026-11-16T00:41:53.041Z] Platform:      darwin
+[2026-11-16T00:41:53.041Z] Node Version:  v24.14.1
+[2026-11-16T00:41:53.041Z] Detected Agent: codex_cli
+[2026-11-16T00:41:53.041Z] Time:          Sun Nov 15 2026 19:41:53 GMT-0500 (Eastern Standard Time)
+[2026-11-16T00:41:53.041Z] ----------------------------------------------------------------------
+
+[2026-11-16T00:41:53.137Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[2026-11-16T00:41:53.137Z] > authorizing via signed-in user (het7891@gmail.com)
+Create your IOS app in project het-cw3-quest-20261115:
+- Creating your iOS app
+[2026-11-16T00:41:53.143Z] Checked if tokens are valid: true, expires at: 1794793213619
+[2026-11-16T00:41:53.143Z] Checked if tokens are valid: true, expires at: 1794793213619
+[2026-11-16T00:41:53.144Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1beta1/projects/het-cw3-quest-20261115/iosApps [none]
+[2026-11-16T00:41:53.144Z] >>> [apiv2][body] POST https://firebase.googleapis.com/v1beta1/projects/het-cw3-quest-20261115/iosApps {"displayName":"Cloud Quest iOS","bundleId":"com.example.firebaseCloudQuestCw3"}
+[2026-11-16T00:41:54.165Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1beta1/projects/het-cw3-quest-20261115/iosApps 200
+[2026-11-16T00:41:54.165Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1beta1/projects/het-cw3-quest-20261115/iosApps {"name":"operations/workflows/NGNjY2ZmYWUtODgxYi00YTM4LWJjZmMtNTBkOTU1MTgyNDE2"}
+[2026-11-16T00:41:54.166Z] Checked if tokens are valid: true, expires at: 1794793213619
+[2026-11-16T00:41:54.166Z] Checked if tokens are valid: true, expires at: 1794793213619
+[2026-11-16T00:41:54.166Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NGNjY2ZmYWUtODgxYi00YTM4LWJjZmMtNTBkOTU1MTgyNDE2 [none]
+[2026-11-16T00:41:54.351Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NGNjY2ZmYWUtODgxYi00YTM4LWJjZmMtNTBkOTU1MTgyNDE2 200
+[2026-11-16T00:41:54.351Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NGNjY2ZmYWUtODgxYi00YTM4LWJjZmMtNTBkOTU1MTgyNDE2 {"name":"operations/workflows/NGNjY2ZmYWUtODgxYi00YTM4LWJjZmMtNTBkOTU1MTgyNDE2"}
+[2026-11-16T00:41:54.851Z] [Create iOS app Poller] Retrying task index 0
+[2026-11-16T00:41:54.851Z] Checked if tokens are valid: true, expires at: 1794793213619
+[2026-11-16T00:41:54.851Z] Checked if tokens are valid: true, expires at: 1794793213619
+[2026-11-16T00:41:54.851Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NGNjY2ZmYWUtODgxYi00YTM4LWJjZmMtNTBkOTU1MTgyNDE2 [none]
+[2026-11-16T00:41:55.121Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NGNjY2ZmYWUtODgxYi00YTM4LWJjZmMtNTBkOTU1MTgyNDE2 200
+[2026-11-16T00:41:55.122Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NGNjY2ZmYWUtODgxYi00YTM4LWJjZmMtNTBkOTU1MTgyNDE2 {"name":"operations/workflows/NGNjY2ZmYWUtODgxYi00YTM4LWJjZmMtNTBkOTU1MTgyNDE2"}
+[2026-11-16T00:41:56.124Z] [Create iOS app Poller] Retrying task index 0
+[2026-11-16T00:41:56.125Z] Checked if tokens are valid: true, expires at: 1794793213619
+[2026-11-16T00:41:56.125Z] Checked if tokens are valid: true, expires at: 1794793213619
+[2026-11-16T00:41:56.125Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NGNjY2ZmYWUtODgxYi00YTM4LWJjZmMtNTBkOTU1MTgyNDE2 [none]
+[2026-11-16T00:41:56.357Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NGNjY2ZmYWUtODgxYi00YTM4LWJjZmMtNTBkOTU1MTgyNDE2 200
+[2026-11-16T00:41:56.358Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NGNjY2ZmYWUtODgxYi00YTM4LWJjZmMtNTBkOTU1MTgyNDE2 {"name":"operations/workflows/NGNjY2ZmYWUtODgxYi00YTM4LWJjZmMtNTBkOTU1MTgyNDE2"}
+[2026-11-16T00:41:58.359Z] [Create iOS app Poller] Retrying task index 0
+[2026-11-16T00:41:58.359Z] Checked if tokens are valid: true, expires at: 1794793213619
+[2026-11-16T00:41:58.360Z] Checked if tokens are valid: true, expires at: 1794793213619
+[2026-11-16T00:41:58.360Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NGNjY2ZmYWUtODgxYi00YTM4LWJjZmMtNTBkOTU1MTgyNDE2 [none]
+[2026-11-16T00:41:58.540Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NGNjY2ZmYWUtODgxYi00YTM4LWJjZmMtNTBkOTU1MTgyNDE2 200
+[2026-11-16T00:41:58.541Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NGNjY2ZmYWUtODgxYi00YTM4LWJjZmMtNTBkOTU1MTgyNDE2 {"name":"operations/workflows/NGNjY2ZmYWUtODgxYi00YTM4LWJjZmMtNTBkOTU1MTgyNDE2"}
+[2026-11-16T00:42:02.544Z] [Create iOS app Poller] Retrying task index 0
+[2026-11-16T00:42:02.545Z] Checked if tokens are valid: true, expires at: 1794793213619
+[2026-11-16T00:42:02.545Z] Checked if tokens are valid: true, expires at: 1794793213619
+[2026-11-16T00:42:02.545Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NGNjY2ZmYWUtODgxYi00YTM4LWJjZmMtNTBkOTU1MTgyNDE2 [none]
+[2026-11-16T00:42:02.715Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NGNjY2ZmYWUtODgxYi00YTM4LWJjZmMtNTBkOTU1MTgyNDE2 200
+[2026-11-16T00:42:02.715Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/NGNjY2ZmYWUtODgxYi00YTM4LWJjZmMtNTBkOTU1MTgyNDE2 {"name":"operations/workflows/NGNjY2ZmYWUtODgxYi00YTM4LWJjZmMtNTBkOTU1MTgyNDE2","done":true,"response":{"@type":"type.googleapis.com/google.firebase.service.v1beta1.IosApp","name":"projects/het-cw3-quest-20261115/iosApps/1:455675119155:ios:6898853ef7cbc16e0ec546","appId":"1:455675119155:ios:6898853ef7cbc16e0ec546","displayName":"Cloud Quest iOS","projectId":"het-cw3-quest-20261115","bundleId":"com.example.firebaseCloudQuestCw3","apiKeyId":"a172718d-a38d-4323-9490-f8452f53e3c8","state":"ACTIVE","expireTime":"1970-01-01T00:00:00Z","framework":{},"etag":"1_cf49978b-c2cf-4274-9751-b7ecb9b31f01"}}
+✔ Creating your iOS app
+
+🎉🎉🎉 Your Firebase IOS App is ready! 🎉🎉🎉
+
+App information:
+  - App ID: 1:455675119155:ios:6898853ef7cbc16e0ec546
+  - Display name: Cloud Quest iOS
+  - Bundle ID: com.example.firebaseCloudQuestCw3
+
+You can run this command to print out your new app's Google Services config:
+  firebase apps:sdkconfig IOS 1:455675119155:ios:6898853ef7cbc16e0ec546

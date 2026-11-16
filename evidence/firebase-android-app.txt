@@ -1,0 +1,59 @@
+[2026-11-16T00:41:42.152Z] ----------------------------------------------------------------------
+[2026-11-16T00:41:42.154Z] Command:       /usr/local/bin/node /Users/hetjani/Desktop/CW02/firebase_cloud_quest_cw3/node_modules/.bin/firebase apps:create ANDROID Cloud Quest Android --package-name com.example.firebase_cloud_quest_cw3 --project het-cw3-quest-20261115
+[2026-11-16T00:41:42.154Z] CLI Version:   15.36.0
+[2026-11-16T00:41:42.154Z] Platform:      darwin
+[2026-11-16T00:41:42.154Z] Node Version:  v24.14.1
+[2026-11-16T00:41:42.154Z] Detected Agent: codex_cli
+[2026-11-16T00:41:42.154Z] Time:          Sun Nov 15 2026 19:41:42 GMT-0500 (Eastern Standard Time)
+[2026-11-16T00:41:42.154Z] ----------------------------------------------------------------------
+
+[2026-11-16T00:41:42.247Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[2026-11-16T00:41:42.248Z] > authorizing via signed-in user (het7891@gmail.com)
+Create your ANDROID app in project het-cw3-quest-20261115:
+- Creating your Android app
+[2026-11-16T00:41:42.254Z] Checked if tokens are valid: true, expires at: 1794793213619
+[2026-11-16T00:41:42.254Z] Checked if tokens are valid: true, expires at: 1794793213619
+[2026-11-16T00:41:42.254Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1beta1/projects/het-cw3-quest-20261115/androidApps [none]
+[2026-11-16T00:41:42.254Z] >>> [apiv2][body] POST https://firebase.googleapis.com/v1beta1/projects/het-cw3-quest-20261115/androidApps {"displayName":"Cloud Quest Android","packageName":"com.example.firebase_cloud_quest_cw3"}
+[2026-11-16T00:41:43.273Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1beta1/projects/het-cw3-quest-20261115/androidApps 200
+[2026-11-16T00:41:43.274Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1beta1/projects/het-cw3-quest-20261115/androidApps {"name":"operations/workflows/ZmI5YWJmNTctYzI4YS00NmI2LTkzZDctM2UwYWJmZTg4Zjdj"}
+[2026-11-16T00:41:43.275Z] Checked if tokens are valid: true, expires at: 1794793213619
+[2026-11-16T00:41:43.275Z] Checked if tokens are valid: true, expires at: 1794793213619
+[2026-11-16T00:41:43.275Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZmI5YWJmNTctYzI4YS00NmI2LTkzZDctM2UwYWJmZTg4Zjdj [none]
+[2026-11-16T00:41:43.568Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZmI5YWJmNTctYzI4YS00NmI2LTkzZDctM2UwYWJmZTg4Zjdj 200
+[2026-11-16T00:41:43.568Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZmI5YWJmNTctYzI4YS00NmI2LTkzZDctM2UwYWJmZTg4Zjdj {"name":"operations/workflows/ZmI5YWJmNTctYzI4YS00NmI2LTkzZDctM2UwYWJmZTg4Zjdj"}
+[2026-11-16T00:41:44.070Z] [Create Android app Poller] Retrying task index 0
+[2026-11-16T00:41:44.071Z] Checked if tokens are valid: true, expires at: 1794793213619
+[2026-11-16T00:41:44.071Z] Checked if tokens are valid: true, expires at: 1794793213619
+[2026-11-16T00:41:44.071Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZmI5YWJmNTctYzI4YS00NmI2LTkzZDctM2UwYWJmZTg4Zjdj [none]
+[2026-11-16T00:41:44.416Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZmI5YWJmNTctYzI4YS00NmI2LTkzZDctM2UwYWJmZTg4Zjdj 200
+[2026-11-16T00:41:44.416Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZmI5YWJmNTctYzI4YS00NmI2LTkzZDctM2UwYWJmZTg4Zjdj {"name":"operations/workflows/ZmI5YWJmNTctYzI4YS00NmI2LTkzZDctM2UwYWJmZTg4Zjdj"}
+[2026-11-16T00:41:45.418Z] [Create Android app Poller] Retrying task index 0
+[2026-11-16T00:41:45.418Z] Checked if tokens are valid: true, expires at: 1794793213619
+[2026-11-16T00:41:45.419Z] Checked if tokens are valid: true, expires at: 1794793213619
+[2026-11-16T00:41:45.419Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZmI5YWJmNTctYzI4YS00NmI2LTkzZDctM2UwYWJmZTg4Zjdj [none]
+[2026-11-16T00:41:45.557Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZmI5YWJmNTctYzI4YS00NmI2LTkzZDctM2UwYWJmZTg4Zjdj 200
+[2026-11-16T00:41:45.558Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZmI5YWJmNTctYzI4YS00NmI2LTkzZDctM2UwYWJmZTg4Zjdj {"name":"operations/workflows/ZmI5YWJmNTctYzI4YS00NmI2LTkzZDctM2UwYWJmZTg4Zjdj"}
+[2026-11-16T00:41:47.559Z] [Create Android app Poller] Retrying task index 0
+[2026-11-16T00:41:47.560Z] Checked if tokens are valid: true, expires at: 1794793213619
+[2026-11-16T00:41:47.560Z] Checked if tokens are valid: true, expires at: 1794793213619
+[2026-11-16T00:41:47.560Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZmI5YWJmNTctYzI4YS00NmI2LTkzZDctM2UwYWJmZTg4Zjdj [none]
+[2026-11-16T00:41:47.735Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZmI5YWJmNTctYzI4YS00NmI2LTkzZDctM2UwYWJmZTg4Zjdj 200
+[2026-11-16T00:41:47.735Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZmI5YWJmNTctYzI4YS00NmI2LTkzZDctM2UwYWJmZTg4Zjdj {"name":"operations/workflows/ZmI5YWJmNTctYzI4YS00NmI2LTkzZDctM2UwYWJmZTg4Zjdj"}
+[2026-11-16T00:41:51.739Z] [Create Android app Poller] Retrying task index 0
+[2026-11-16T00:41:51.740Z] Checked if tokens are valid: true, expires at: 1794793213619
+[2026-11-16T00:41:51.740Z] Checked if tokens are valid: true, expires at: 1794793213619
+[2026-11-16T00:41:51.740Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZmI5YWJmNTctYzI4YS00NmI2LTkzZDctM2UwYWJmZTg4Zjdj [none]
+[2026-11-16T00:41:52.147Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZmI5YWJmNTctYzI4YS00NmI2LTkzZDctM2UwYWJmZTg4Zjdj 200
+[2026-11-16T00:41:52.147Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZmI5YWJmNTctYzI4YS00NmI2LTkzZDctM2UwYWJmZTg4Zjdj {"name":"operations/workflows/ZmI5YWJmNTctYzI4YS00NmI2LTkzZDctM2UwYWJmZTg4Zjdj","done":true,"response":{"@type":"type.googleapis.com/google.firebase.service.v1beta1.AndroidApp","name":"projects/het-cw3-quest-20261115/androidApps/1:455675119155:android:73676337d34a64e20ec546","appId":"1:455675119155:android:73676337d34a64e20ec546","displayName":"Cloud Quest Android","projectId":"het-cw3-quest-20261115","packageName":"com.example.firebase_cloud_quest_cw3","apiKeyId":"58edf4ec-d7e3-4e4b-b5eb-14bfd929e643","state":"ACTIVE","expireTime":"1970-01-01T00:00:00Z","framework":{},"etag":"1_ae7bed56-817e-4edd-8198-6b6394979e86"}}
+✔ Creating your Android app
+
+🎉🎉🎉 Your Firebase ANDROID App is ready! 🎉🎉🎉
+
+App information:
+  - App ID: 1:455675119155:android:73676337d34a64e20ec546
+  - Display name: Cloud Quest Android
+  - Package name: com.example.firebase_cloud_quest_cw3
+
+You can run this command to print out your new app's Google Services config:
+  firebase apps:sdkconfig ANDROID 1:455675119155:android:73676337d34a64e20ec546

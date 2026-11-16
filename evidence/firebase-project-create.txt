@@ -1,0 +1,75 @@
+[2026-11-16T00:40:56.613Z] ----------------------------------------------------------------------
+[2026-11-16T00:40:56.679Z] Command:       /usr/local/bin/node /Users/hetjani/Desktop/CW02/firebase_cloud_quest_cw3/node_modules/.bin/firebase projects:create het-cw3-quest-20261115 --display-name Het Jani CW3 Cloud Quest
+[2026-11-16T00:40:56.679Z] CLI Version:   15.36.0
+[2026-11-16T00:40:56.679Z] Platform:      darwin
+[2026-11-16T00:40:56.679Z] Node Version:  v24.14.1
+[2026-11-16T00:40:56.679Z] Detected Agent: codex_cli
+[2026-11-16T00:40:56.679Z] Time:          Sun Nov 15 2026 19:40:56 GMT-0500 (Eastern Standard Time)
+[2026-11-16T00:40:56.679Z] ----------------------------------------------------------------------
+
+[2026-11-16T00:40:56.809Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[2026-11-16T00:40:56.812Z] > authorizing via signed-in user (het7891@gmail.com)
+- Creating Google Cloud Platform project
+[2026-11-16T00:40:56.822Z] Checked if tokens are valid: true, expires at: 1794793213619
+[2026-11-16T00:40:56.822Z] Checked if tokens are valid: true, expires at: 1794793213619
+[2026-11-16T00:40:56.823Z] >>> [apiv2][query] POST https://cloudresourcemanager.googleapis.com/v1/projects [none]
+[2026-11-16T00:40:56.823Z] >>> [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"projectId":"het-cw3-quest-20261115","name":"Het Jani CW3 Cloud Quest"}
+[2026-11-16T00:40:57.260Z] <<< [apiv2][status] POST https://cloudresourcemanager.googleapis.com/v1/projects 200
+[2026-11-16T00:40:57.260Z] <<< [apiv2][body] POST https://cloudresourcemanager.googleapis.com/v1/projects {"name":"operations/create_project.global.7430088835971816324"}
+[2026-11-16T00:40:57.260Z] Checked if tokens are valid: true, expires at: 1794793213619
+[2026-11-16T00:40:57.260Z] Checked if tokens are valid: true, expires at: 1794793213619
+[2026-11-16T00:40:57.261Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.7430088835971816324 [none]
+[2026-11-16T00:40:57.534Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.7430088835971816324 200
+[2026-11-16T00:40:57.534Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.7430088835971816324 {"name":"operations/create_project.global.7430088835971816324"}
+[2026-11-16T00:40:58.034Z] [Project Creation Poller] Retrying task index 0
+[2026-11-16T00:40:58.034Z] Checked if tokens are valid: true, expires at: 1794793213619
+[2026-11-16T00:40:58.034Z] Checked if tokens are valid: true, expires at: 1794793213619
+[2026-11-16T00:40:58.034Z] >>> [apiv2][query] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.7430088835971816324 [none]
+[2026-11-16T00:40:58.154Z] <<< [apiv2][status] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.7430088835971816324 200
+[2026-11-16T00:40:58.154Z] <<< [apiv2][body] GET https://cloudresourcemanager.googleapis.com/v1/operations/create_project.global.7430088835971816324 {"name":"operations/create_project.global.7430088835971816324","metadata":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.ProjectCreationStatus","gettable":true,"ready":true},"done":true,"response":{"@type":"type.googleapis.com/google.cloudresourcemanager.v1.Project","projectNumber":"455675119155","projectId":"het-cw3-quest-20261115","lifecycleState":"ACTIVE","name":"Het Jani CW3 Cloud Quest","createTime":"2026-11-16T00:40:57.203Z"}}
+✔ Creating Google Cloud Platform project
+- Adding Firebase resources to Google Cloud Platform project
+[2026-11-16T00:40:58.155Z] Checked if tokens are valid: true, expires at: 1794793213619
+[2026-11-16T00:40:58.155Z] Checked if tokens are valid: true, expires at: 1794793213619
+[2026-11-16T00:40:58.155Z] >>> [apiv2][query] POST https://firebase.googleapis.com/v1beta1/projects/het-cw3-quest-20261115:addFirebase [none]
+[2026-11-16T00:41:00.166Z] <<< [apiv2][status] POST https://firebase.googleapis.com/v1beta1/projects/het-cw3-quest-20261115:addFirebase 200
+[2026-11-16T00:41:00.172Z] <<< [apiv2][body] POST https://firebase.googleapis.com/v1beta1/projects/het-cw3-quest-20261115:addFirebase {"name":"operations/workflows/ZTAzZWNiOTctMzNjMS00ZjRiLTlmZDgtNTgxMDMzZDY4OTdm"}
+[2026-11-16T00:41:00.174Z] Checked if tokens are valid: true, expires at: 1794793213619
+[2026-11-16T00:41:00.174Z] Checked if tokens are valid: true, expires at: 1794793213619
+[2026-11-16T00:41:00.174Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZTAzZWNiOTctMzNjMS00ZjRiLTlmZDgtNTgxMDMzZDY4OTdm [none]
+[2026-11-16T00:41:04.180Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZTAzZWNiOTctMzNjMS00ZjRiLTlmZDgtNTgxMDMzZDY4OTdm 200
+[2026-11-16T00:41:04.181Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZTAzZWNiOTctMzNjMS00ZjRiLTlmZDgtNTgxMDMzZDY4OTdm {"name":"operations/workflows/ZTAzZWNiOTctMzNjMS00ZjRiLTlmZDgtNTgxMDMzZDY4OTdm"}
+[2026-11-16T00:41:04.682Z] [Add Firebase Poller] Retrying task index 0
+[2026-11-16T00:41:04.682Z] Checked if tokens are valid: true, expires at: 1794793213619
+[2026-11-16T00:41:04.683Z] Checked if tokens are valid: true, expires at: 1794793213619
+[2026-11-16T00:41:04.683Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZTAzZWNiOTctMzNjMS00ZjRiLTlmZDgtNTgxMDMzZDY4OTdm [none]
+[2026-11-16T00:41:04.964Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZTAzZWNiOTctMzNjMS00ZjRiLTlmZDgtNTgxMDMzZDY4OTdm 200
+[2026-11-16T00:41:04.964Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZTAzZWNiOTctMzNjMS00ZjRiLTlmZDgtNTgxMDMzZDY4OTdm {"name":"operations/workflows/ZTAzZWNiOTctMzNjMS00ZjRiLTlmZDgtNTgxMDMzZDY4OTdm"}
+[2026-11-16T00:41:05.964Z] [Add Firebase Poller] Retrying task index 0
+[2026-11-16T00:41:05.965Z] Checked if tokens are valid: true, expires at: 1794793213619
+[2026-11-16T00:41:05.965Z] Checked if tokens are valid: true, expires at: 1794793213619
+[2026-11-16T00:41:05.965Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZTAzZWNiOTctMzNjMS00ZjRiLTlmZDgtNTgxMDMzZDY4OTdm [none]
+[2026-11-16T00:41:06.147Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZTAzZWNiOTctMzNjMS00ZjRiLTlmZDgtNTgxMDMzZDY4OTdm 200
+[2026-11-16T00:41:06.147Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZTAzZWNiOTctMzNjMS00ZjRiLTlmZDgtNTgxMDMzZDY4OTdm {"name":"operations/workflows/ZTAzZWNiOTctMzNjMS00ZjRiLTlmZDgtNTgxMDMzZDY4OTdm"}
+[2026-11-16T00:41:08.150Z] [Add Firebase Poller] Retrying task index 0
+[2026-11-16T00:41:08.152Z] Checked if tokens are valid: true, expires at: 1794793213619
+[2026-11-16T00:41:08.153Z] Checked if tokens are valid: true, expires at: 1794793213619
+[2026-11-16T00:41:08.153Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZTAzZWNiOTctMzNjMS00ZjRiLTlmZDgtNTgxMDMzZDY4OTdm [none]
+[2026-11-16T00:41:08.441Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZTAzZWNiOTctMzNjMS00ZjRiLTlmZDgtNTgxMDMzZDY4OTdm 200
+[2026-11-16T00:41:08.441Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZTAzZWNiOTctMzNjMS00ZjRiLTlmZDgtNTgxMDMzZDY4OTdm {"name":"operations/workflows/ZTAzZWNiOTctMzNjMS00ZjRiLTlmZDgtNTgxMDMzZDY4OTdm"}
+[2026-11-16T00:41:12.445Z] [Add Firebase Poller] Retrying task index 0
+[2026-11-16T00:41:12.447Z] Checked if tokens are valid: true, expires at: 1794793213619
+[2026-11-16T00:41:12.448Z] Checked if tokens are valid: true, expires at: 1794793213619
+[2026-11-16T00:41:12.448Z] >>> [apiv2][query] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZTAzZWNiOTctMzNjMS00ZjRiLTlmZDgtNTgxMDMzZDY4OTdm [none]
+[2026-11-16T00:41:12.951Z] <<< [apiv2][status] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZTAzZWNiOTctMzNjMS00ZjRiLTlmZDgtNTgxMDMzZDY4OTdm 200
+[2026-11-16T00:41:12.951Z] <<< [apiv2][body] GET https://firebase.googleapis.com/v1beta1/operations/workflows/ZTAzZWNiOTctMzNjMS00ZjRiLTlmZDgtNTgxMDMzZDY4OTdm {"name":"operations/workflows/ZTAzZWNiOTctMzNjMS00ZjRiLTlmZDgtNTgxMDMzZDY4OTdm","done":true,"response":{"@type":"type.googleapis.com/google.firebase.service.v1beta1.FirebaseProject","projectId":"het-cw3-quest-20261115","projectNumber":"455675119155","displayName":"Het Jani CW3 Cloud Quest","name":"projects/het-cw3-quest-20261115","resources":{"hostingSite":"het-cw3-quest-20261115"}}}
+✔ Adding Firebase resources to Google Cloud Platform project
+
+🎉🎉🎉 Your Firebase project is ready! 🎉🎉🎉
+
+Project information:
+   - Project ID: het-cw3-quest-20261115
+   - Project Name: Het Jani CW3 Cloud Quest
+
+Firebase console is available at
+https://console.firebase.google.com/project/het-cw3-quest-20261115/overview

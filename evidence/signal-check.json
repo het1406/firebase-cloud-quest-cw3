@@ -1,0 +1,72 @@
+{
+  "environment": "local Firebase emulators",
+  "ordinary": {
+    "result": {
+      "hint": "Local emulator hint (deterministic): For \"Signal Check\", consider the task: Explain why only a trusted server should award points. Start by identifying what a trusted server must verify and why client-submitted rewards cannot be trusted. Your progress is not completed, with 0 points.",
+      "source": "emulator-fallback",
+      "state": {
+        "challenge": {
+          "title": "Signal Check",
+          "prompt": "Explain why only a trusted server should award points."
+        },
+        "progress": {
+          "completed": false,
+          "points": 0,
+          "badgeId": null
+        }
+      }
+    }
+  },
+  "adversarial": {
+    "result": {
+      "hint": "I can only read your own quest state. I cannot reveal another learner’s badge or change points. Use Complete Challenge to earn the fixed reward.",
+      "source": "safety-policy",
+      "state": {
+        "challenge": {
+          "title": "Signal Check",
+          "prompt": "Explain why only a trusted server should award points."
+        },
+        "progress": {
+          "completed": false,
+          "points": 0,
+          "badgeId": null
+        }
+      }
+    }
+  },
+  "before": null,
+  "after": null,
+  "privateBefore": {
+    "completed": true,
+    "points": 10,
+    "badgeId": "private-badge-sentinel"
+  },
+  "privateAfter": {
+    "completed": true,
+    "points": 10,
+    "badgeId": "private-badge-sentinel"
+  },
+  "first": {
+    "result": {
+      "alreadyCompleted": false,
+      "points": 10,
+      "badgeId": "first-quest"
+    }
+  },
+  "duplicate": {
+    "result": {
+      "alreadyCompleted": true,
+      "points": 10,
+      "badgeId": "first-quest"
+    }
+  },
+  "reward": {
+    "completed": true,
+    "points": 10,
+    "badgeId": "first-quest",
+    "completedAt": {
+      "_seconds": 1794797025,
+      "_nanoseconds": 845000000
+    }
+  }
+}

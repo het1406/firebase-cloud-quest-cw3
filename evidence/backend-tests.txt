@@ -1,0 +1,50 @@
+✔ first completion is exactly 10 points with server timestamp and badge (3879.084833ms)
+✔ repeated completion preserves reward and timestamp (38.485042ms)
+✔ unauthenticated completion denied (1.415167ms)
+✔ invalid challenge denied (0.1595ms)
+✔ client score, badge and UID manipulation ignored (29.99125ms)
+✔ 12 concurrent requests award once (3540.039ms)
+✔ tool reads only caller state (5.807709ms)
+✔ question boundaries reject malformed and unauthorized input (0.324875ms)
+✔ rules allow authenticated challenge and own progress reads (240.999ms)
+[2026-11-16T02:43:39.066Z]  @firebase/firestore: Firestore (13.3.0): GrpcConnection RPC 'Write' stream 0x1c115f18 error. Code: 7 Message: 7 PERMISSION_DENIED: 
+false for 'create' @ L10, false for 'update' @ L10
+[2026-11-16T02:43:39.107Z]  @firebase/firestore: Firestore (13.3.0): GrpcConnection RPC 'Write' stream 0x1c115f19 error. Code: 7 Message: 7 PERMISSION_DENIED: 
+false for 'create' @ L10, false for 'update' @ L10
+[2026-11-16T02:43:39.112Z]  @firebase/firestore: Firestore (13.3.0): GrpcConnection RPC 'Write' stream 0x1c115f1a error. Code: 7 Message: 7 PERMISSION_DENIED: 
+false for 'create' @ L6, false for 'update' @ L6
+✔ rules deny cross-user reads, all reward writes and challenge writes (81.4195ms)
+[2026-11-16T02:43:39.135Z]  @firebase/firestore: Firestore (13.3.0): GrpcConnection RPC 'Write' stream 0x1c115f1c error. Code: 7 Message: 7 PERMISSION_DENIED: 
+false for 'create' @ L10, false for 'update' @ L10
+✔ rules deny anonymous reads and writes (23.086833ms)
+i  functions: Trying to access secret GOOGLE_GENAI_API_KEY@latest
+⬢  functions: Unable to access secret environment variables from Google Cloud Secret Manager. Make sure the credential used for the Functions Emulator have access or provide override values in /Users/hetjani/Desktop/CW02/firebase_cloud_quest_cw3/functions/.secret.local:
+	FirebaseError: Request to https://secretmanager.googleapis.com/v1/projects/demo-cloud-quest/secrets/GOOGLE_GENAI_API_KEY/versions/latest:access had HTTP Error: 403, Permission denied on resource project demo-cloud-quest.
+i  functions: Beginning execution of "us-central1-askQuestCoach"
+>  {"verifications":{"app":"MISSING","auth":"VALID"},"logging.googleapis.com/labels":{"firebase-log-type":"callable-request-verification"},"severity":"DEBUG","message":"Callable request verification passed"}
+i  functions: Finished "us-central1-askQuestCoach" in 97.170417ms
+i  functions: Beginning execution of "us-central1-askQuestCoach"
+>  {"verifications":{"app":"MISSING","auth":"VALID"},"logging.googleapis.com/labels":{"firebase-log-type":"callable-request-verification"},"severity":"DEBUG","message":"Callable request verification passed"}
+i  functions: Finished "us-central1-askQuestCoach" in 4.7795ms
+i  functions: Beginning execution of "us-central1-completeToday"
+>  {"verifications":{"app":"MISSING","auth":"MISSING"},"logging.googleapis.com/labels":{"firebase-log-type":"callable-request-verification"},"severity":"DEBUG","message":"Callable request verification passed"}
+i  functions: Finished "us-central1-completeToday" in 6.9685ms
+i  functions: Beginning execution of "us-central1-completeToday"
+>  {"verifications":{"app":"MISSING","auth":"VALID"},"logging.googleapis.com/labels":{"firebase-log-type":"callable-request-verification"},"severity":"DEBUG","message":"Callable request verification passed"}
+i  functions: Finished "us-central1-completeToday" in 95.261333ms
+i  functions: Beginning execution of "us-central1-completeToday"
+>  {"verifications":{"app":"MISSING","auth":"VALID"},"logging.googleapis.com/labels":{"firebase-log-type":"callable-request-verification"},"severity":"DEBUG","message":"Callable request verification passed"}
+i  functions: Finished "us-central1-completeToday" in 10.269583ms
+✔ callable protocol: grounded emulator hint; adversarial state unchanged (6734.364209ms)
+✔ fallback is restricted to emulator environment and can be disabled (0.721ms)
+✔ provider failure is safe and does not expose its error details (0.266917ms)
+✔ empty model response fails safely (0.068333ms)
+ℹ tests 15
+ℹ suites 0
+ℹ pass 15
+ℹ fail 0
+ℹ cancelled 0
+ℹ skipped 0
+ℹ todo 0
+ℹ duration_ms 15079.08625
+✔  Script exited successfully (code 0)

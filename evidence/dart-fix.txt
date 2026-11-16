@@ -1,0 +1,7 @@
+Computing fixes in firebase_cloud_quest_cw3...
+Applying fixes...
+
+lib/main.dart
+  curly_braces_in_flow_control_structures - 8 fixes
+
+8 fixes made in 1 file.
