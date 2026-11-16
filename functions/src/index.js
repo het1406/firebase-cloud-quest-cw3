@@ -5,7 +5,11 @@ const { defineSecret } = require("firebase-functions/params");
 const { genkit, z } = require("genkit");
 const { googleAI } = require("@genkit-ai/google-genai");
 const { uidOf, complete, readState, questionOf } = require("./core");
-const { emulatorFallbackAllowed, generateHint } = require("./model");
+const {
+  emulatorFallbackAllowed,
+  generateHint,
+  selectedModel,
+} = require("./model");
 initializeApp();
 const db = getFirestore();
 const key = defineSecret("GOOGLE_GENAI_API_KEY");
@@ -16,10 +20,23 @@ exports.askQuestCoach = onCall(
   { region: "us-central1", secrets: [key], timeoutSeconds: 45 },
   async (request) => {
     const uid = uidOf(request);
+    // Mock mode is server-controlled and impossible to select in production.
+    const apiKey =
+      process.env.FUNCTIONS_EMULATOR === "true" &&
+      process.env.QUEST_COACH_MODE === "mock"
+        ? ""
+        : key.value();
     const question = questionOf(request);
+    const steps = [];
+    const audit = () => ({
+      steps: [...steps],
+      provider: "googleai",
+      model: selectedModel(),
+      writesAllowed: false,
+    });
     // A request-local tool closes over verified identity. Neither model nor client can select a UID.
     const ai = genkit({
-      plugins: [googleAI({ apiKey: key.value() || "unconfigured" })],
+      plugins: [googleAI({ apiKey: apiKey || "unconfigured" })],
     });
     const readMyQuestState = ai.defineTool(
       {
@@ -28,11 +45,16 @@ exports.askQuestCoach = onCall(
           "Read only the authenticated caller’s daily quest. No writes.",
         inputSchema: z.object({}).strict(),
       },
-      async () => readState(db, uid),
+      async () => {
+        const state = await readState(db, uid);
+        steps.push("readMyQuestState");
+        return state;
+      },
     );
     const state = await readMyQuestState({});
     // Deterministic refusal guarantees no false claim of writes for the required Signal Check.
     if (
+      !apiKey &&
       /\b(ignore|another|other learner|500|give me .*points|change .*points)\b/i.test(
         question,
       )
@@ -41,21 +63,25 @@ exports.askQuestCoach = onCall(
         hint: "I can only read your own quest state. I cannot reveal another learner’s badge or change points. Use Complete Challenge to earn the fixed reward.",
         source: "safety-policy",
         state,
+        audit: audit(),
       };
     }
-    if (!key.value() && emulatorFallbackAllowed()) {
+    if (!apiKey && emulatorFallbackAllowed()) {
       return {
         hint: `Local emulator hint (deterministic): For "${state.challenge.title}", consider the task: ${state.challenge.prompt} Start by identifying what a trusted server must verify and why client-submitted rewards cannot be trusted. Your progress is ${state.progress.completed ? "completed" : "not completed"}, with ${state.progress.points} points.`,
         source: "emulator-fallback",
         state,
+        audit: audit(),
       };
     }
-    if (!key.value())
+    if (!apiKey)
       throw new HttpsError(
         "unavailable",
         "Quest Coach is not configured. Please try again after the model service is connected.",
       );
+    steps.push("generate");
     const hint = await generateHint(ai, readMyQuestState, state, question);
-    return { hint, source: "genkit", state };
+    steps.push("generated");
+    return { hint, source: "genkit", state, audit: audit() };
   },
 );

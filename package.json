@@ -1,9 +1,10 @@
 {
   "private": true,
   "scripts": {
-    "test": "firebase emulators:exec --project demo-cloud-quest --only auth,firestore,functions 'node --test --test-concurrency=1 functions/test/*.test.js'",
+    "test": "QUEST_COACH_MODE=mock QUEST_FUNCTIONS_EMULATOR_HOST=127.0.0.1:5002 firebase emulators:exec --config firebase.test.json --project demo-cloud-quest --only auth,firestore,functions 'node --test --test-concurrency=1 functions/test/*.test.js'",
     "emulators": "firebase emulators:start --project demo-cloud-quest --only auth,firestore,functions",
-    "seed": "node scripts/seed.js"
+    "seed": "node scripts/seed.js",
+    "test:live": "FIRESTORE_EMULATOR_HOST=127.0.0.1:8080 node scripts/live_signal_check.cjs"
   },
   "devDependencies": {
     "firebase-tools": "latest",

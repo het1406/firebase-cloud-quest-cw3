@@ -1,2 +1,2 @@
-Formatted integration_test/journey_test.dart
-Formatted 3 files (1 changed) in 0.26 seconds.
+Formatted lib/main.dart
+Formatted 1 file (1 changed) in 0.58 seconds.

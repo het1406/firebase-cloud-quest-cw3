@@ -14,6 +14,14 @@
           "points": 0,
           "badgeId": null
         }
+      },
+      "audit": {
+        "steps": [
+          "readMyQuestState"
+        ],
+        "provider": "googleai",
+        "model": "googleai/gemini-3.5-flash-lite",
+        "writesAllowed": false
       }
     }
   },
@@ -31,6 +39,14 @@
           "points": 0,
           "badgeId": null
         }
+      },
+      "audit": {
+        "steps": [
+          "readMyQuestState"
+        ],
+        "provider": "googleai",
+        "model": "googleai/gemini-3.5-flash-lite",
+        "writesAllowed": false
       }
     }
   },
@@ -65,8 +81,8 @@
     "points": 10,
     "badgeId": "first-quest",
     "completedAt": {
-      "_seconds": 1794797025,
-      "_nanoseconds": 845000000
+      "_seconds": 1794802790,
+      "_nanoseconds": 567000000
     }
   }
 }

@@ -1,56 +1,45 @@
 # CW3 — Firebase Cloud Quest: Signal Check
 
-**Student:** Het Jani
-
-**Submitted By:** Het Jani
-
-**Project Owner:** Het Jani
-
-**Submission By:** Het Jani
+**Student / Submitted By / Project Owner:** Het Jani
 
 **Course:** CSC 4360 — Mobile App Development
 
-**Submission Type:** Individual Coursework
+**Pathway / Type:** Undergraduate · Individual Coursework
 
-**Pathway:** Undergraduate
-
-**Repository:** https://github.com/het1406/firebase-cloud-quest-cw3
+**Repository:** https://github.com/het1406/firebase-cloud-quest-cw3 (public)
 
 **Deadline:** November 15, 2026, 11:59 PM EST
 
-## Verified preparation
+## Verified technical work
 
-- [x] New Flutter project and new Git repository; no earlier assignment overwritten.
-- [x] `lib/`, `android/`, `ios/`, `functions/`, `test/`, `integration_test/`, `evidence/`, `pubspec.yaml`, `firebase.json`, and `firestore.rules` exist.
-- [x] Registration/sign-in/sign-out and authenticated routing implemented.
-- [x] Daily challenge and private progress streams implemented.
-- [x] Exactly 10 points, badge, server timestamp, duplicate prevention and concurrency tested in emulators.
-- [x] Security rules tested for unauthorized reads and reward writes.
-- [x] Genkit authorized read-only state tool, provisional configurable model adapter, and labeled deterministic emulator fallback implemented.
-- [x] Required adversarial callable refusal and unchanged reward state captured.
-- [x] Flutter analysis and widget tests recorded.
-- [x] All 15 backend/security/provider-failure tests pass.
-- [x] Android integration journey passes; seven current device screenshots captured.
-- [x] Grounded deterministic fallback captured and clearly distinguished from a live model.
-- [x] Fresh cloud project, Android/iOS client registrations, Firestore rules deployment, and challenge seed completed.
-- [x] README, 128-word reflection draft, student reflection guide, and 100-point rubric audit prepared.
-- [x] Student identity confirmed as Het Jani.
-- [x] Dedicated public GitHub repository verified under the authenticated student account.
-- [x] Source and documentation pushed; remote commit verified against local main.
-- [x] Standalone debug APK builds successfully.
-- [x] Source submission ZIP prepared at `../CW3_Het_Jani_Submission.zip` (source, tests, documents, and evidence; generated build caches excluded).
+- [x] Fresh independent Flutter application and Git repository.
+- [x] Authentication, protected routing, shared challenge, and private progress implemented.
+- [x] Trusted callable awards exactly 10 points and first-quest badge once, with server timestamp.
+- [x] Repeat and 12 concurrent completion requests do not duplicate rewards.
+- [x] Firestore rules deny direct reward writes, anonymous access, and cross-user reads.
+- [x] Real Gemini 3.5 Flash-Lite calls through the authenticated callable.
+- [x] Actual audit records readMyQuestState before generation.
+- [x] Ordinary live hint grounded in stored Signal Check challenge and zero points.
+- [x] Live adversarial response refuses private-data access and point changes.
+- [x] Two synthetic learners' records unchanged after both live requests.
+- [x] Provider error/empty-response fixtures fail safely without leaking private error details.
+- [x] 16 backend/security/model tests pass; 3 Flutter tests pass; analysis clean.
+- [x] Complete Android live-provider journey passes, including actual hint/refusal screenshots; prior deterministic journey also passed.
+- [x] Source, tests, configuration, documents, and evidence prepared.
+- [x] Reflection is 128 words and marked for student review.
+- [x] Repository is public as explicitly requested.
 
-## Final review and remaining requirements
+## Delivery checks
 
-- [ ] Confirm approved model gateway, configure its key locally/Secret Manager, and capture a genuinely grounded ordinary hint.
-- [ ] Re-run Signal Check with the live model configuration; compare both students' before/after records.
-- [ ] Initialize cloud Firebase Authentication and enable Email/Password.
-- [ ] Decide on Blaze billing, deploy callable functions, and repeat the complete cloud journey.
-- [ ] Personally review the passing Android log/screenshots in `evidence/README.md` and perform your own demonstration.
-- [ ] Build/test iOS if required; current Xcode/CocoaPods setup is incomplete.
-- [ ] Review and personalize reflection using genuine observations; comply with any required assistance disclosure.
-- [x] Repository visibility is public; instructor access does not require an invitation.
-- [ ] Check the course portal's exact file/link/video requirements; none were provided in the assignment prompt.
-- [ ] Upload required deliverables and repository URL to the course portal, then verify its receipt. **Not submitted.**
+Use `FINAL_SUBMISSION_AUDIT.md`, the ZIP's embedded Git commit, and `submission/ARCHIVE_VERIFICATION.json` for final packaging and scan results. `submission/SHA256SUMS.txt` records delivered file hashes. The source ZIP excludes local credentials, dependency folders, and build caches.
 
-Live-model hint evidence is missing; the local grounded hint uses the authorized deterministic fallback. Do not label the project fully verified until it and the remaining cloud/model checks are complete. Screenshots and logs must be reviewed against actual test outcomes, not inferred from feature implementation.
+## Remaining student actions
+
+- [ ] Confirm the instructor permits the selected provider/model; official materials were unavailable.
+- [ ] Delete the key exposed in the earlier screenshot if not already deleted. Never upload that screenshot or any key.
+- [ ] Initialize cloud Email/Password Auth and deploy Functions if the official assignment requires deployed services; Blaze billing is still blocked.
+- [ ] Verify iOS only if required; this machine lacks complete Xcode/CocoaPods tooling.
+- [ ] Review/personalize the reflection and comply with the course assistance-disclosure policy.
+- [ ] Open the actual iCollege CW3 assignment and check its precise upload fields.
+- [ ] Upload the final source ZIP and GitHub link; provide reflection/screenshots separately only where requested.
+- [ ] Click the portal's final Submit control and verify/save its receipt. **No receipt or course-portal submission has been observed.**

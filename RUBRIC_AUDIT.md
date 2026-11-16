@@ -1,16 +1,16 @@
-# Rubric audit — Het Jani
+# Undergraduate rubric readiness — Het Jani
 
-CSC 4360 — CW3 — Undergraduate individual coursework. This audit maps all 100 available points; it is not a grade estimate or a claim that every requirement is complete.
+The supplied weights total 100 points. The official assignment sheet, detailed scoring descriptors, and instructor provider approval were not provided or found. The following **provisional 79–94/100 readiness range is not an awarded or guaranteed grade**; it estimates likely readiness against the user's supplied requirements. An instructor may score differently or permit emulator-only delivery.
 
-| Category | Available | Implementation / evidence | Status and remaining requirement |
-|---|---:|---|---|
-| Engagement and learning process | 5 | Fresh Git repository, environment logs, README setup and architecture | Partial: student must review implementation and demonstrate their own learning; no invented participation history. |
-| Conceptual understanding | 15 | `functions/src/core.js`, `functions/src/index.js`, `firestore.rules`, README | Implemented: verified UID boundary, transaction idempotency, read-only tool. Student should explain these choices. |
-| Core application | 30 | `lib/main.dart`, `test/widget_test.dart`, `integration_test/journey_test.dart`, device evidence | Verified on Android with a passing integration journey and seven screenshots. Cloud Auth and deployed Functions remain unfinished. |
-| AI agent | 15 | `functions/src/index.js`, `evidence/signal-check.json` | Partial: actual Genkit tool and provider adapter exist. Grounded deterministic emulator hint and safety refusal verified. Missing approved model configuration and live generation; fallback is not proof of live model quality or resistance. |
-| Reasoning and reflection | 10 | `REFLECTION.md` (128 words), `STUDENT_REFLECTION_GUIDE.md`, actual Signal Check before/after state | Draft prepared, student review required. Revise after live-model evaluation. |
-| Testing and evidence | 15 | 3 Flutter tests; 15 emulator backend/rules/provider-failure tests; Android journey; `evidence/` | 3 widget tests, 15 backend tests, and 1 Android journey pass; analysis is clean. Successful live model hint screenshot/evaluation and cloud journey still missing. |
-| Communication and delivery | 10 | README, reflection, audit, checklist; new public GitHub repository | Documents prepared and pushed to the verified public repository; course portal not submitted. |
-| **Total available** | **100** | All categories mapped | **Not fully verified; no guaranteed grade.** |
+| Category | Available | Provisional readiness | Files, tests, evidence | Remaining risk / action |
+|---|---:|---:|---|---|
+| Engagement and learning process | 5 | 2–4 | `ENGAGEMENT_EVIDENCE.md`, Git history, debugging logs | Personal learning/demonstration not independently confirmed; student review needed. |
+| Conceptual understanding | 15 | 13–15 | README architecture; `core.js`, `index.js`, `model.js`; auth, isolation, transaction and tool-boundary tests | Student must explain the boundary; official descriptors unavailable. |
+| Core application | 30 | 24–28 | `lib/`, Android journey, registration/sign-in/sign-out, 10-point and concurrency tests | Local behavior verified; cloud Auth/deployed Functions incomplete. Confirm whether deployment is required. iOS unverified. |
+| AI agent | 15 | 11–14 | Actual Genkit model responses and tool-order audit in `live-signal-check.json`; both learners' records unchanged | Live Gemini works. Instructor model approval and broader adversarial coverage remain unverified. |
+| Reasoning and reflection | 10 | 8–9 | `REFLECTION.md` (128 words), student guide, actual ordinary/attack records | Student must review/personalize honestly and follow disclosure policy. |
+| Testing and evidence | 15 | 13–15 | 16 backend/rules/model tests; 3 Flutter tests; live callable and Android checks; evidence index | Cloud and iOS gaps; the live Android journey passes with real hint and refusal screenshots. |
+| Communication and delivery | 10 | 8–9 | Public GitHub repository, README, final audit, checklist, verified source ZIP | Portal fields/official deliverable format unavailable; no iCollege receipt. |
+| **Total** | **100** | **79–94** | Evidence-based working estimate | **Not a guaranteed grade.** |
 
-Resolvable implementation failures were corrected during testing: analyzer scanned Node package Dart templates, Kotlin was too old for the installed Firebase SDK, the emulator seed needed correct Node package resolution, Android debug builds needed local HTTP access, and the demo API key needed the SDK’s expected format. Exact final outcomes are in the evidence files; the ordinary fallback is explicitly not counted as live model success.
+To close the gaps: confirm the official model allowance, initialize cloud Email/Password Auth and deploy Functions if required (Blaze billing needed), verify any required additional platform, review the reflection, and complete the actual iCollege submission with a receipt. Do not conceal the remaining gaps to claim 100/100.

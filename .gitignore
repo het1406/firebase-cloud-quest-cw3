@@ -54,3 +54,5 @@ firebase_options.dart
 playwright-report/
 
 **/build/
+
+**/.kotlin/

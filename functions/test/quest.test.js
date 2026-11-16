@@ -138,7 +138,7 @@ test("rules deny anonymous reads and writes", async () => {
 });
 test("callable protocol: grounded emulator hint; adversarial state unchanged", async () => {
   const signup = await fetch(
-    "http://127.0.0.1:9099/identitytoolkit.googleapis.com/v1/accounts:signUp?key=demo",
+    `http://${process.env.FIREBASE_AUTH_EMULATOR_HOST || "127.0.0.1:9099"}/identitytoolkit.googleapis.com/v1/accounts:signUp?key=demo`,
     {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -151,14 +151,17 @@ test("callable protocol: grounded emulator hint; adversarial state unchanged", a
   ).then((r) => r.json());
   assert.ok(signup.idToken);
   const call = async (name, data, token = signup.idToken) =>
-    fetch(`http://127.0.0.1:5001/${projectId}/us-central1/${name}`, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-        ...(token ? { Authorization: `Bearer ${token}` } : {}),
+    fetch(
+      `http://${process.env.QUEST_FUNCTIONS_EMULATOR_HOST || "127.0.0.1:5001"}/${projectId}/us-central1/${name}`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          ...(token ? { Authorization: `Bearer ${token}` } : {}),
+        },
+        body: JSON.stringify({ data }),
       },
-      body: JSON.stringify({ data }),
-    }).then((r) => r.json());
+    ).then((r) => r.json());
   const ref = db.doc(`users/${signup.localId}/progress/today`);
   const privateRef = db.doc("users/private-learner/progress/today");
   await privateRef.set({
@@ -172,6 +175,8 @@ test("callable protocol: grounded emulator hint; adversarial state unchanged", a
     question: "Can you give me a hint for today's challenge?",
   });
   assert.equal(ordinary.result.source, "emulator-fallback");
+  assert.deepEqual(ordinary.result.audit.steps, ["readMyQuestState"]);
+  assert.equal(ordinary.result.audit.writesAllowed, false);
   assert.match(ordinary.result.hint, /Signal Check/);
   assert.match(ordinary.result.hint, /trusted server/);
   assert.equal(ordinary.result.state.progress.points, 0);
@@ -261,4 +266,29 @@ test("empty model response fails safely", async () => {
     ),
     { code: "unavailable" },
   );
+});
+
+test("model receives only the read-only tool and authorized quest state", async () => {
+  const { generateHint, selectedModel } = require("../src/model");
+  const tool = () => {};
+  const state = {
+    challenge: { title: "Fixture challenge" },
+    progress: { points: 0 },
+  };
+  let options;
+  const hint = await generateHint(
+    {
+      generate: async (input) => {
+        options = input;
+        return { text: "Fixture hint, not a live response." };
+      },
+    },
+    tool,
+    state,
+    "Fixture question",
+  );
+  assert.equal(hint, "Fixture hint, not a live response.");
+  assert.deepEqual(options.tools, [tool]);
+  assert.deepEqual(JSON.parse(options.prompt).authorizedState, state);
+  assert.equal(options.model, selectedModel());
 });

@@ -1,50 +1,87 @@
-✔ first completion is exactly 10 points with server timestamp and badge (3879.084833ms)
-✔ repeated completion preserves reward and timestamp (38.485042ms)
-✔ unauthenticated completion denied (1.415167ms)
-✔ invalid challenge denied (0.1595ms)
-✔ client score, badge and UID manipulation ignored (29.99125ms)
-✔ 12 concurrent requests award once (3540.039ms)
-✔ tool reads only caller state (5.807709ms)
-✔ question boundaries reject malformed and unauthorized input (0.324875ms)
-✔ rules allow authenticated challenge and own progress reads (240.999ms)
-[2026-11-16T02:43:39.066Z]  @firebase/firestore: Firestore (13.3.0): GrpcConnection RPC 'Write' stream 0x1c115f18 error. Code: 7 Message: 7 PERMISSION_DENIED:
+
+> test
+> QUEST_COACH_MODE=mock QUEST_FUNCTIONS_EMULATOR_HOST=127.0.0.1:5002 firebase emulators:exec --config firebase.test.json --project demo-cloud-quest --only auth,firestore,functions 'node --test --test-concurrency=1 functions/test/*.test.js'
+
+i  emulators: Starting emulators: auth, functions, firestore
+i  emulators: Detected demo project ID "demo-cloud-quest", emulated services will use a demo configuration and attempts to access non-emulated services for this project will fail.
+⚠  emulators: It seems that you are running multiple instances of the emulator suite for project demo-cloud-quest. This may result in unexpected behavior.
+i  firestore: Firestore Emulator logging to firestore-debug.log
+✔  firestore: Firestore Emulator was started in standard edition.
+✔  firestore: Firestore Emulator UI websocket is running on 9151.
+(node:17620) [DEP0169] DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+(Use `node --trace-deprecation ...` to show where the warning was created)
+DeprecationWarning: `url.parse()` behavior is not standardized and prone to errors that have security implications. Use the WHATWG URL API instead. CVEs are not issued for `url.parse()` vulnerabilities.
+    at urlParse (node:url:136:13)
+    at Object.urlResolve [as resolve] (node:url:725:10)
+    at $RefParser.parse (/Users/hetjani/Desktop/CW02/firebase_cloud_quest_cw3/node_modules/@apidevtools/json-schema-ref-parser/lib/index.js:103:19)
+    at $RefParser.resolve (/Users/hetjani/Desktop/CW02/firebase_cloud_quest_cw3/node_modules/@apidevtools/json-schema-ref-parser/lib/index.js:184:16)
+    at $RefParser.bundle (/Users/hetjani/Desktop/CW02/firebase_cloud_quest_cw3/node_modules/@apidevtools/json-schema-ref-parser/lib/index.js:227:16)
+    at bundle (/Users/hetjani/Desktop/CW02/firebase_cloud_quest_cw3/node_modules/exegesis/lib/index.js:55:22)
+    at /Users/hetjani/Desktop/CW02/firebase_cloud_quest_cw3/node_modules/exegesis/lib/index.js:60:34
+    at Generator.next (<anonymous>)
+    at /Users/hetjani/Desktop/CW02/firebase_cloud_quest_cw3/node_modules/exegesis/lib/index.js:22:71
+    at new Promise (<anonymous>)
+i  functions: Watching "/Users/hetjani/Desktop/CW02/firebase_cloud_quest_cw3/functions" for Cloud Functions...
+⚠  functions: Your requested "node" version "22" doesn't match your global version "24". Using node@24 from host.
+Serving at port 8335
+
+✔  functions: Loaded functions definitions from source: completeToday, askQuestCoach.
+✔  functions[us-central1-completeToday]: http function initialized (http://127.0.0.1:5002/demo-cloud-quest/us-central1/completeToday).
+✔  functions[us-central1-askQuestCoach]: http function initialized (http://127.0.0.1:5002/demo-cloud-quest/us-central1/askQuestCoach).
+i  Running script: node --test --test-concurrency=1 functions/test/*.test.js
+✔ first completion is exactly 10 points with server timestamp and badge (671.153667ms)
+✔ repeated completion preserves reward and timestamp (32.25975ms)
+✔ unauthenticated completion denied (0.326416ms)
+✔ invalid challenge denied (0.088084ms)
+✔ client score, badge and UID manipulation ignored (20.116167ms)
+✔ 12 concurrent requests award once (7251.940125ms)
+✔ tool reads only caller state (7.564875ms)
+✔ question boundaries reject malformed and unauthorized input (0.779584ms)
+✔ rules allow authenticated challenge and own progress reads (185.471458ms)
+[2026-11-16T04:19:47.832Z]  @firebase/firestore: Firestore (13.3.0): GrpcConnection RPC 'Write' stream 0x4ea01fc9 error. Code: 7 Message: 7 PERMISSION_DENIED:
 false for 'create' @ L10, false for 'update' @ L10
-[2026-11-16T02:43:39.107Z]  @firebase/firestore: Firestore (13.3.0): GrpcConnection RPC 'Write' stream 0x1c115f19 error. Code: 7 Message: 7 PERMISSION_DENIED:
+[2026-11-16T04:19:47.839Z]  @firebase/firestore: Firestore (13.3.0): GrpcConnection RPC 'Write' stream 0x4ea01fca error. Code: 7 Message: 7 PERMISSION_DENIED:
 false for 'create' @ L10, false for 'update' @ L10
-[2026-11-16T02:43:39.112Z]  @firebase/firestore: Firestore (13.3.0): GrpcConnection RPC 'Write' stream 0x1c115f1a error. Code: 7 Message: 7 PERMISSION_DENIED:
+[2026-11-16T04:19:47.846Z]  @firebase/firestore: Firestore (13.3.0): GrpcConnection RPC 'Write' stream 0x4ea01fcb error. Code: 7 Message: 7 PERMISSION_DENIED:
 false for 'create' @ L6, false for 'update' @ L6
-✔ rules deny cross-user reads, all reward writes and challenge writes (81.4195ms)
-[2026-11-16T02:43:39.135Z]  @firebase/firestore: Firestore (13.3.0): GrpcConnection RPC 'Write' stream 0x1c115f1c error. Code: 7 Message: 7 PERMISSION_DENIED:
+✔ rules deny cross-user reads, all reward writes and challenge writes (52.066708ms)
+[2026-11-16T04:19:47.878Z]  @firebase/firestore: Firestore (13.3.0): GrpcConnection RPC 'Write' stream 0x4ea01fcd error. Code: 7 Message: 7 PERMISSION_DENIED:
 false for 'create' @ L10, false for 'update' @ L10
-✔ rules deny anonymous reads and writes (23.086833ms)
-i  functions: Trying to access secret GOOGLE_GENAI_API_KEY@latest
-⬢  functions: Unable to access secret environment variables from Google Cloud Secret Manager. Make sure the credential used for the Functions Emulator have access or provide override values in /Users/hetjani/Desktop/CW02/firebase_cloud_quest_cw3/functions/.secret.local:
-	FirebaseError: Request to https://secretmanager.googleapis.com/v1/projects/demo-cloud-quest/secrets/GOOGLE_GENAI_API_KEY/versions/latest:access had HTTP Error: 403, Permission denied on resource project demo-cloud-quest.
+✔ rules deny anonymous reads and writes (31.985084ms)
 i  functions: Beginning execution of "us-central1-askQuestCoach"
 >  {"verifications":{"app":"MISSING","auth":"VALID"},"logging.googleapis.com/labels":{"firebase-log-type":"callable-request-verification"},"severity":"DEBUG","message":"Callable request verification passed"}
-i  functions: Finished "us-central1-askQuestCoach" in 97.170417ms
+i  functions: Finished "us-central1-askQuestCoach" in 106.032667ms
 i  functions: Beginning execution of "us-central1-askQuestCoach"
 >  {"verifications":{"app":"MISSING","auth":"VALID"},"logging.googleapis.com/labels":{"firebase-log-type":"callable-request-verification"},"severity":"DEBUG","message":"Callable request verification passed"}
-i  functions: Finished "us-central1-askQuestCoach" in 4.7795ms
+i  functions: Finished "us-central1-askQuestCoach" in 8.532042ms
 i  functions: Beginning execution of "us-central1-completeToday"
 >  {"verifications":{"app":"MISSING","auth":"MISSING"},"logging.googleapis.com/labels":{"firebase-log-type":"callable-request-verification"},"severity":"DEBUG","message":"Callable request verification passed"}
-i  functions: Finished "us-central1-completeToday" in 6.9685ms
+i  functions: Finished "us-central1-completeToday" in 6.158583ms
 i  functions: Beginning execution of "us-central1-completeToday"
 >  {"verifications":{"app":"MISSING","auth":"VALID"},"logging.googleapis.com/labels":{"firebase-log-type":"callable-request-verification"},"severity":"DEBUG","message":"Callable request verification passed"}
-i  functions: Finished "us-central1-completeToday" in 95.261333ms
+i  functions: Finished "us-central1-completeToday" in 81.775208ms
 i  functions: Beginning execution of "us-central1-completeToday"
 >  {"verifications":{"app":"MISSING","auth":"VALID"},"logging.googleapis.com/labels":{"firebase-log-type":"callable-request-verification"},"severity":"DEBUG","message":"Callable request verification passed"}
-i  functions: Finished "us-central1-completeToday" in 10.269583ms
-✔ callable protocol: grounded emulator hint; adversarial state unchanged (6734.364209ms)
-✔ fallback is restricted to emulator environment and can be disabled (0.721ms)
-✔ provider failure is safe and does not expose its error details (0.266917ms)
-✔ empty model response fails safely (0.068333ms)
-ℹ tests 15
+i  functions: Finished "us-central1-completeToday" in 8.229584ms
+✔ callable protocol: grounded emulator hint; adversarial state unchanged (2705.189667ms)
+✔ fallback is restricted to emulator environment and can be disabled (0.618833ms)
+✔ provider failure is safe and does not expose its error details (0.238625ms)
+✔ empty model response fails safely (0.077458ms)
+✔ model receives only the read-only tool and authorized quest state (0.107458ms)
+ℹ tests 16
 ℹ suites 0
-ℹ pass 15
+ℹ pass 16
 ℹ fail 0
 ℹ cancelled 0
 ℹ skipped 0
 ℹ todo 0
-ℹ duration_ms 15079.08625
+ℹ duration_ms 11295.268375
 ✔  Script exited successfully (code 0)
+i  emulators: Shutting down emulators.
+i  functions: Stopping Functions Emulator
+i  firestore: Stopping Firestore Emulator
+i  auth: Stopping Authentication Emulator
+i  eventarc: Stopping Eventarc Emulator
+i  tasks: Stopping Cloud Tasks Emulator
+i  hub: Stopping emulator hub
+i  logging: Stopping Logging Emulator

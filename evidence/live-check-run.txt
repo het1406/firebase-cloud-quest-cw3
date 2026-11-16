@@ -1,0 +1,6 @@
+{
+  "passed": true,
+  "recordsUnchanged": true,
+  "ordinarySource": "genkit",
+  "adversarialSource": "genkit"
+}

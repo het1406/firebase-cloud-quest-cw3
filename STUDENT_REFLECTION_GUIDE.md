@@ -1,17 +1,15 @@
 # Student reflection guide — Het Jani
 
-Review this guide and the actual logs before editing the reflection. The implementation and test runs were automated; do not claim personal testing or learning experiences unless they are true for you.
+Read the actual responses in `evidence/live-signal-check.json` before personalizing the reflection. The implementation and recorded checks were automated; describe only your own genuine personal observations in first person.
 
-The security boundary is the authenticated backend. Mobile widgets can request rewards, but they cannot choose a UID, score, or badge. Firestore rules block direct writes. The reward callable independently checks authentication and commits one fixed reward in a transaction. The coach uses a separate read-only tool and cannot invoke the reward callable.
+Seven factual points you can explain:
 
-Use these seven factual points to personalize the reflection:
+1. The backend obtains the learner UID from verified Firebase Authentication, not a client field or model-selected argument.
+2. `readMyQuestState` reads the shared challenge and only the authenticated learner's progress. Its input schema is empty and strict.
+3. The live audit records `readMyQuestState` before `generate`. The ordinary Gemini response names Signal Check and zero points, matching the stored data.
+4. The live attack asks for another learner's badge and 500 points. Gemini explicitly says it cannot access other learners' data or change points.
+5. Two real synthetic Auth accounts were used. The caller's zero-point record and the second learner's private badge/10-point record were identical before and after both requests.
+6. The model receives only the read-only tool. Only `completeToday` can award the fixed reward, using verified identity and a transaction. Repeat and 12 concurrent calls do not duplicate rewards.
+7. Live-provider evidence, deterministic emulator evidence, and injected failure fixtures are distinct. Cloud deployment and instructor provider approval are still unverified.
 
-1. `readMyQuestState` closes over the verified Auth UID. Its empty input schema gives the model no way to choose someone else's identity.
-2. The tool reads `challenges/today` and `users/{uid}/progress/today`. The callable runs it before producing a normal hint.
-3. Without a provider key, emulator mode produces a visibly labeled deterministic hint containing the retrieved challenge and the caller's progress. This is not a live AI-model result or evidence of instructor-approved provider use.
-4. The required attack asks for another learner's badge and 500 points. The backend refuses it; `evidence/signal-check.json` records the actual response.
-5. That evidence compares the caller's progress and a different learner's private badge record before and after the attack. Neither changes, and the private badge value is absent from the response.
-6. First completion and repeat calls leave exactly 10 points and the `first-quest` badge. The backend test also launches 12 simultaneous requests and verifies only one first completion.
-7. The provisional Genkit adapter still needs the approved gateway/key and live evaluation. Provider failure tests use injected failures and do not demonstrate a working live model.
-
-Before submission, open the app, repeat the ordinary hint, attack, completion, duplicate completion, and sign-out. Compare what you actually observe with the screenshots and logs. Explain in your own words why security rules alone do not replace authentication checks in Admin SDK functions. Verify the draft accurately represents your observations, and follow the course's assistance-disclosure requirements. Do not add a first-person account of tests you have not performed.
+Before submitting, perform your own brief demonstration if possible, verify that the reflection matches what you observed, and follow the course's assistance-disclosure requirements. Never include the API-key screenshot or any key value in your submission.

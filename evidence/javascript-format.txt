@@ -1,4 +1,7 @@
-functions/src/core.js 46ms (unchanged)
-functions/src/index.js 19ms
-functions/src/model.js 3ms
-functions/test/quest.test.js 22ms
+functions/src/core.js 30ms (unchanged)
+functions/src/index.js 10ms (unchanged)
+functions/src/model.js 3ms (unchanged)
+functions/test/quest.test.js 16ms
+scripts/live_signal_check.cjs 10ms (unchanged)
+package.json 1ms (unchanged)
+firebase.test.json 1ms (unchanged)

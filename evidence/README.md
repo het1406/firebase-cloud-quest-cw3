@@ -1,33 +1,32 @@
-# Genuine evidence inventory
+# Evidence inventory — Het Jani
 
-These artifacts were produced by actual automated commands and Android emulator interactions on November 15, 2026 (America/New_York). Some service logs use UTC and therefore show November 16. No screenshots or model responses were fabricated.
+All artifacts are from actual automated execution. Local dates use America/New_York; UTC logs may show November 16. No provider credential or its screenshot belongs in this folder.
 
-| File | What it demonstrates |
-|---|---|
-| `flutter-doctor.txt`, `flutter-devices.txt` | Initial environment inspection and platform limitations |
-| `flutter-analyze.txt` | Final static analysis result |
-| `flutter-tests.txt` | Three Flutter validation/widget tests |
-| `backend-tests.txt` | 15 passing Firebase emulator/provider-failure tests, including denied unauthorized writes |
-| `signal-check.json` | Grounded deterministic emulator hint, deterministic adversarial refusal, caller and other-user before/after state, first and duplicate completion |
-| `android-build.txt` | Successful standalone debug APK build after clearing disposable build intermediates |
-| `android-launch.txt` | Installing and launching the standalone app on Android |
-| `android-journey.txt` | Passing Android integration journey result |
-| `device-suite.txt` | Emulator startup, callable activity, and Android test orchestration |
-| `01-signed-out.png` | Actual signed-out screen |
-| `02-signed-in.png` | Actual challenge and initial progress |
-| `03-grounded-emulator-hint.png` | Real challenge-grounded deterministic fallback, **not** live model evidence |
-| `03-coach-unavailable.png` | Historical missing-model error captured before the updated prompt authorized fallback |
-| `04-signal-check.png` | Actual deterministic security refusal |
-| `05-earned-reward.png` | First completion, 10 points, and First Quest badge |
-| `06-duplicate-reward.png` | Duplicate completion without an increased reward |
-| `07-signed-out-again.png` | Protected screen removed after sign-out |
-| `firebase-project-create.txt` | New cloud project creation |
-| `cloud-rules-deploy.txt` | Successful security rules deployment |
-| `cloud-challenge-seed.txt` | Successful cloud challenge seed |
-| `cloud-configure.txt` | Cloud Authentication configuration blocker |
-| `cloud-functions-deploy.txt` | Actual Blaze billing deployment blocker |
-| `flutterfire-configure.txt` | Attempted registration and missing iOS Ruby dependency |
+## Live provider evidence
 
-Read test results to distinguish implementation from verified behavior. All seven current numbered journey stages are present and the Android integration test passes. The additional historical unavailable screenshot predates the fallback requirement. A successful live-model AI hint and the full live-cloud journey remain missing. Backend safety checks do not prove live model quality or general prompt-injection resistance.
+- `live-signal-check.json`: passing real Gemini 3.5 Flash-Lite ordinary and adversarial requests through the authenticated Firebase callable, tool-before-generation audit, and unchanged before/after records for two synthetic learners.
+- `live-check-run.txt`: sanitized live-check summary.
+- `android-live-journey.txt`: latest Android live-provider journey and final result.
+- `03-live-model-hint.png`: actual generated hint in the Android application.
+- `04-live-signal-check.png`: actual live adversarial response in the Android application.
+- `01-signed-out.png`, `02-signed-in.png`, `05-earned-reward.png`, `06-duplicate-reward.png`, `07-signed-out-again.png`: most recent journey captures, including exactly 10 points and the badge.
 
-CLI environment-dump lines and ANSI control sequences are removed from captured text for privacy/readability; trailing whitespace is normalized. Remaining messages and results are genuine. `signal-check.json` excludes session tokens and passwords.
+## Deterministic mocks and failure fixtures
+
+- `signal-check.json`: deterministic emulator fallback and safety-policy response, not a model-generated hint.
+- `android-journey.txt`, `03-grounded-emulator-hint.png`, `04-signal-check.png`: prior passing deterministic journey and screenshots.
+- `backend-tests.txt`: 16 passing tests. Provider-error and empty-response tests use injected fixtures; ordinary callable checks run in server-controlled mock mode on isolated emulators.
+- `flutter-analyze.txt`: clean analysis; `flutter-tests.txt`: 3 passing Flutter tests.
+
+## Historical attempts and environment
+
+- `live-signal-check-initial.json`: first live request pair kept records safe but failed the explicit-refusal wording assertion. It is not labeled a passing test.
+- `android-live-journey-initial-failure.txt`: initial device test with a missing test-selector assertion; the final rerun is in `android-live-journey.txt`.
+- Files named `initial-failure` or `disk-failure` preserve resolved build/launch issues.
+- `03-coach-unavailable.png` is a historical missing-provider error before fallback/live configuration.
+- `cloud-rules-deploy.txt` and `cloud-challenge-seed.txt`: successful cloud Firestore work.
+- `cloud-configure.txt` and `cloud-functions-deploy.txt`: unresolved cloud Auth/billing blockers.
+- `flutter-doctor.txt`, `flutter-devices.txt`, and `flutterfire-configure.txt`: actual environment and iOS limitations.
+- `credential-scan.json`: history scan for its recorded Git head. The final scan and ZIP-to-commit verification are alongside the archive in `submission/ARCHIVE_VERIFICATION.json`.
+
+ANSI sequences, incidental environment-dump lines, and trailing whitespace are removed from text captures for readability and privacy. Actual responses, results, and timestamps are preserved. Model behavior is verified only for the recorded scenarios; general injection resistance and instructor approval are not claimed.

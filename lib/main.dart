@@ -506,7 +506,10 @@ class _QuestScreenState extends State<QuestScreen> {
                 if (hint != null)
                   Padding(
                     padding: const EdgeInsets.only(top: 16),
-                    child: Semantics(liveRegion: true, child: Text(hint!)),
+                    child: Semantics(
+                      liveRegion: true,
+                      child: Text(hint!, key: const ValueKey('coach-hint')),
+                    ),
                   ),
               ]),
             ],
